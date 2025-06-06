@@ -31,7 +31,12 @@ while True:
         videojuegos.append(videojuego)
         print('Videojuego registrado correctamente.')
     elif opcion=='2':
-        pass
+        if len(videojuegos)==0:
+            print('No hay videojuegos registrados.')
+        else:
+            print('\n--- LISTA DE VIDEOJUEGOS ---')
+            for v in videojuegos:
+                print(f'Código: {v[codigo]}, Nombre: {v[nombre]}, Género: {v[genero]}, Plataforma: {v[plataforma]}')
     elif opcion=='3':
         pass
     elif opcion=='4':
