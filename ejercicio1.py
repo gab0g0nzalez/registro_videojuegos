@@ -38,7 +38,25 @@ while True:
             for v in videojuegos:
                 print(f'Código: {v[codigo]}, Nombre: {v[nombre]}, Género: {v[genero]}, Plataforma: {v[plataforma]}')
     elif opcion=='3':
-        pass
+        codigo= int(input('Ingrese el código del videojuego a modificar:    '))
+        encontrado=False
+        for v in videojuegos:
+            if v['codigo']==codigo:
+                v['nombre']=input('Nuevo nombre:   ')
+                v['genero']=input('Nuevo género:    ')
+                print('\nPlataformas disponibles:')
+                print('1.   PC')
+                print('2.   PS5')
+                print('3.   Xbox Series X')
+                print('4.   Nintendo Switch')
+
+                plataforma_codigo=int(input('Seleccione el número de la plataforma: '))
+
+                print('Videojuego modificado correctamente.')
+                encontrado=True
+                break
+        if not encontrado:
+            print('Videojuego no encontrado.')
     elif opcion=='4':
         pass
     elif opcion=='5':
